@@ -28,12 +28,6 @@ Gaussian KDE uses Scott's bandwidth multiplied by 0.8 for covariances and
 Use --break-y LOW HIGH (for example, --break-y 0.4 0.9) to also save
 broken-axis copies omitting that y interval, while retaining the standard plots.
 The default is full commutation; --condition qwc selects its QWC subset.
-
-The existing exact routines allocate full-register arrays even for fermionic
-sectors. --dry-run reports the core covariance workspace before diagonalization;
-it excludes eigensolver/sparse-Hamiltonian and worker temporary memory. The
-16 GiB default guard may be raised explicitly; 0 disables it. A 24-qubit exact
-calculation requires very large resources with this backend.
 """
 
 from __future__ import annotations

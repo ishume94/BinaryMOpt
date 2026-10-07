@@ -1,10 +1,8 @@
 """Run SI-ICS long controls at R=1 angstrom, optimizing CISD and reporting FCI.
 
 Run ``python -u long_si_ics.py --cov-workers 12`` for all eight molecules, or
-pass molecule names (for example, ``H4 LiH``) to run a subset. Chemistry,
-sorted insertion, support expansion, and QR coefficient solves match
-driver_o_clique.py. Each SI partition receives 100 ICS iterations from its
-original coefficients; the expanded support stays fixed throughout.
+pass molecule names (for example, ``H4 LiH``) to run a subset. Each SI partition
+receives 100 ICS iterations from its original coefficients.
 """
 
 import argparse

@@ -1,6 +1,6 @@
 """Variance-ordered insertion and refinement using existing covariance data.
 
-Adapted from fast_VarSI.py: cache group variances, covariance sums, and
+Adapted from fast_VarSI.py, see arXiv:2607.02794 : cache group variances, covariance sums, and
 compatibility masks. Context matrices and covariance dictionaries are read-only.
 """
 

@@ -4,7 +4,6 @@ Each binary variable activates one candidate clique. Continuous nonnegative
 profile multipliers reconstruct the Hamiltonian under the seed's group cap.
 Their weighted standard deviations give a linear upper bound on the sum of
 fragment standard deviations. The final coefficients are refined by array-based ICS.
-Solver bounds describe this finite-profile model, not global overlap optimality.
 """
 
 from collections import Counter

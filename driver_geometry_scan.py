@@ -1,6 +1,6 @@
 """Transfer one molecular MILP partition across a bond-length scan.
 
-Run ``python -u driver_geometry_scan.py LiH`` (or H2, MgO, SiO, H4, H6, BeH2, N2, H2O, NH3).
+Run ``python -u driver_geometry_scan.py LiH`` (or H2, MgO, H4, H6, BeH2, N2, H2O, NH3).
 R is the bond distance in angstrom; H chains have uniform spacing and linear
 BeH2 stretches both Be--H bonds equally. Use STO-3G/Jordan--Wigner. Only the
 --ropt reference (default: 1.0 A) invokes MILP; each geometry supplies its own coefficients and
@@ -51,7 +51,7 @@ from bin_mopt.utils import (
 REFERENCE_DISTANCE = 1.0
 METHODS = ("SI", "SI-ICS", "MILP", "MILP+ICS")
 REFINED_METHODS = ("MILP-R", "MILP-R-ICS")
-MOLECULES = ("H2", "LiH", "MgO", "SiO", "H4", "H6", "BeH2", "N2", "H2O", "NH3")
+MOLECULES = ("H2", "LiH", "MgO", "H4", "H6", "BeH2", "N2", "H2O", "NH3")
 WAVEFUNCTIONS = ("FCI", "CISD")
 
 
@@ -67,7 +67,7 @@ def geometry_string(name, distance):
         atoms = [("H", 0.0, 0.0, i * distance) for i in range(int(name[1:]))]
     elif name == "LiH":
         atoms = [("Li", 0.0, 0.0, 0.0), ("H", 0.0, 0.0, distance)]
-    elif name in ("MgO", "SiO"):
+    elif name == "MgO":
         atoms = [(name[:-1], 0.0, 0.0, 0.0), ("O", 0.0, 0.0, distance)]
     elif name == "BeH2":
         atoms = [("Be", 0.0, 0.0, 0.0), ("H", 0.0, 0.0, distance),

@@ -1,4 +1,4 @@
-"""Exact-name coefficient reconstruction heuristics for overlapping groups."""
+"""Coefficient reconstruction heuristics for overlapping groups."""
 
 import numpy as np
 

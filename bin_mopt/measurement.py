@@ -1,11 +1,3 @@
-"""Measurement-aware data model and objective utilities for BinMOpt.
-
-The routines in this module are backend-independent.  A grouping is represented
-by a binary matrix ``x[i, alpha]``.  Each row is therefore a binary vector that
-can contain more than one active entry, which directly represents overlapping
-measurement groups.
-"""
-
 from dataclasses import dataclass, field
 from math import erf, exp, pi, sqrt
 from typing import Any, Iterable, Mapping, Optional, Sequence

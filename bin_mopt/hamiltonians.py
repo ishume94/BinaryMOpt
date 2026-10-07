@@ -44,10 +44,6 @@ def MgO(*, frozen_core: bool = True):
     return _molecule("Mg 0.0 0.0 0.0\nO 0.0 0.0 1.75", frozen_core=frozen_core)
 
 
-def SiO(*, frozen_core: bool = True):
-    return _molecule("Si 0.0 0.0 0.0\nO 0.0 0.0 1.5", frozen_core=frozen_core)
-
-
 def N2(*, frozen_core: bool = True):
     return _molecule("N 0.0 0.0 0.0\nN 0.0 0.0 1.0", frozen_core=frozen_core)
 
@@ -125,7 +121,7 @@ def NH3(*, frozen_core: bool = True):
 
 MOLECULES = {
     function.__name__: function
-    for function in (H2, LiH, MgO, SiO, N2, H4, H6, BeH2, H2O, H2Os, NH3)
+    for function in (H2, LiH, MgO, N2, H4, H6, BeH2, H2O, H2Os, NH3)
 }
 
 

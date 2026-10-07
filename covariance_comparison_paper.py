@@ -8,11 +8,10 @@ The memory limit is the same core-workspace guard as covariance_plot.py;
 0 disables it, and the estimate excludes eigensolver and worker temporaries.
 Use --dry-run to build Hamiltonians and report estimates without solving.
 
-Uses covariance_plot.py's state defaults, sample selection, KDE bandwidths,
-and plotting style. Each system's density is independently peak-normalized.
+Each system's density is independently peak-normalized.
 Saves separate covariance and variance comparisons as PNG and SVG; --break-y
-also saves broken-axis copies. No plot titles are added. H2O uses the default
-geometry, STO-3G, frozen core, and FCI reference from covariance_plot.py.
+also saves broken-axis copies. H2O uses the default geometry, STO-3G, frozen core,
+and FCI reference from covariance_plot.py.
 """
 
 from __future__ import annotations
