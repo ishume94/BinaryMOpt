@@ -1,6 +1,8 @@
 # Binary Measurement Optimization
 
-BinMOpt is research software in development for optimizing fully commuting Pauli measurement groups. It is aimed towards binary optimization of measurement costs for energy estimation of molecular and lattice Hamiltonians. For details on the methods, please refer to the paper "Binary Optimization of Measurement Groupings for Quantum Energy Estimation"
+[![arXiv](https://img.shields.io/badge/arXiv-2610.10339-b31b1b.svg)](https://arxiv.org/abs/2610.10339)
+
+bin_mopt uses classical binary optimization to reduce measurement costs for quantum energy estimation in molecular and lattice Hamiltonians. It constructs fully commuting Pauli groups through MILP-based clique selection, uses these groups to initialize iterative coefficient splitting (MILP-ICS), and directly optimizes overlapping supports with O-clique. The methods are described in [Binary Optimization of Measurement Groupings for Quantum Energy Estimation](https://arxiv.org/abs/2610.10339).
 
 ## Objective and methods
 
@@ -80,4 +82,18 @@ done
 
 Without `--seed-file`, each run computes a new starting MILP partition. For shorter runs, set both limits explicitly, for example `--seed-time-limit-s 300 --overlap-time-limit-s 300`.
 
-The clique MILP uses a finite set of coefficient profiles and a linear upper bound on the sum of fragment standard deviations. Squaring this bound gives an upper bound on $\varepsilon^2M$. 
+The clique MILP uses a finite set of coefficient profiles and a linear upper bound on the sum of fragment standard deviations. Squaring this bound gives an upper bound on $\varepsilon^2M$.
+
+## Citation
+
+```bibtex
+@misc{huidobromeezs2026binaryoptimizationmeasurementgroupings,
+  title={Binary Optimization of Measurement Groupings for Quantum Energy Estimation},
+  author={Isaac L. Huidobro-Meezs and Rodrigo A. Vargas-Hernández},
+  year={2026},
+  eprint={2610.10339},
+  archivePrefix={arXiv},
+  primaryClass={quant-ph},
+  url={https://arxiv.org/abs/2610.10339},
+}
+```
